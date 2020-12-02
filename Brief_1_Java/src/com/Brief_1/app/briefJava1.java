@@ -2,6 +2,9 @@ package com.Brief_1.app;
 
 import java.util.Scanner;
 
+
+
+
 public class briefJava1 {
 	
 	public static double tarifExtra(int heure,double tarif) {
@@ -37,6 +40,8 @@ public class briefJava1 {
 			inputPrenom = new Scanner(System.in);
 			inputNom = new Scanner(System.in);
 			
+			int DiffHeure;
+			
 			System.out.println("--------------------Calculez votre indemnisation-------------------- ");
 			
 			System.out.print("Entrez votre nom : \t");
@@ -59,7 +64,8 @@ public class briefJava1 {
 				/* Condition des heures supp*/
 				if(heure>40) {
 					
-					salaire = tarifOridinaire(heure, tarif)+tarifExtra(heure, tarif);
+					DiffHeure =  heure - 40;
+					salaire = tarifOridinaire(heure, tarif)+tarifExtra(DiffHeure, tarif);
 					
 				}
 				else {
